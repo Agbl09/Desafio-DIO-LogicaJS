@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <title> Linguagem de Scripts</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            
+            var x= 1;
+
+            if(true)
+        {
+            var x= 2;
+            alert(x); // vai exibir 2
+        }
+
+        alert(x); // vai exibir 2
+        // Conclusão: a variável x que declaramos no if irá subscrever a variável x que declaramos no começo pois VAR atua em contexto de função 
+
+        </script>
+    </body>
+    
+</html>
+
+<!--Se fosse com let-->
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <title> Linguagem de Scripts</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            
+            let x= 1;
+
+            if(true)
+        {
+            let x= 2;
+            alert(x); // vai exibir 2
+        }
+
+        alert(x); // vai exibir 1
+        // Conclusão: como as variáveis let atuam em contexto de bloco, a variável do bloco IF não subscreve a variável declarada no inicio     
+
+        </script>
+    </body>  
+
+</html>      
