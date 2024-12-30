@@ -7,3 +7,69 @@
    - Verifique se o valor não está vazio.
    - Adicione o valor à lista usando o método `push`.
    - Atualize a exibição da lista na página criando dinamicamente elementos `<li>` para cada item.-->
+
+<!--Abaixo está o algoritmo feito de acordo com a sugestão-->
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Variáveis e Listas</title>
+</head>
+
+<body>
+
+  <h1>Trabalhando com Variáveis e Listas</h1>
+  
+  <p>Adicione um item à lista:</p>
+  <input type="text" id="itemInput" placeholder="Digite um item">
+  <button onclick="adicionarItem()">Adicionar</button>
+
+  <h2>Itens da Lista:</h2>
+  <ul id="lista"></ul>
+
+  <script>
+    // Declaração de uma variável de lista vazia
+    let listaDeItens = [];
+
+    // Função para adicionar um item à lista
+    function adicionarItem() {
+      // Obtém o valor do input
+      let novoItem = document.getElementById("itemInput").value;
+
+      // Verifica se o input não está vazio
+      if (novoItem.trim() !== "") {
+        // Adiciona o item à lista
+        listaDeItens.push(novoItem);
+
+        // Atualiza a exibição da lista
+        atualizarLista();
+
+        // Limpa o input
+        document.getElementById("itemInput").value = "";
+      } else {
+        alert("Por favor, digite um item válido.");
+      }
+    }
+
+    // Função para atualizar a exibição da lista
+    function atualizarLista() {
+      // Seleciona o elemento <ul>
+      let listaHTML = document.getElementById("lista");
+
+      // Limpa o conteúdo atual
+      listaHTML.innerHTML = "";
+
+      // Adiciona cada item da lista como um <li>
+      listaDeItens.forEach((item) => {
+        let listItem = document.createElement("li");
+        listItem.textContent = item;
+        listaHTML.appendChild(listItem);
+      });
+    }
+  </script>
+</body>
+</html>
