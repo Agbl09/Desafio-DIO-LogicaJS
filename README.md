@@ -1,2 +1,2 @@
-# Desafio-DIO-LogicaPython
-Repositório para o desafio da DIO com foco em lógica de Python
+# Desafio-DIO-LogicaJS
+Repositório para o desafio da DIO com foco em lógica de JavaScript
